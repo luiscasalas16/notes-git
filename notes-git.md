@@ -2,7 +2,7 @@
 
 ---
 ### Configuración
-
+```
 //establecer nombre usuario
 git config --global user.name "Luis Carlos Salas Villalobos"
 //consultar nombre usuario
@@ -22,18 +22,18 @@ git config --global alias.l "log --graph --abbrev-commit --decorate --format=for
 
 git s
 git l
-
+```
 ---
 ### Files
-
+```
 //archivo para ignorar archivos o carpetas, se incluye en el repositorio
 .gitignote
 //archivo para incluir carpetas vacias en el repositorio, se incluye en el repositorio
 .gitkeep
-
+```
 ---
 ### Repositorio
-
+```
 //inicializar repositorio
 git init
 
@@ -55,10 +55,10 @@ git mv X Y
 
 //elimina X
 git rm X
-
+```
 ---
 ### Commit
-
+```
 //resetear ARCHIVO o . (todos) en el stage
 git reset .
 
@@ -116,10 +116,10 @@ git reflog
 git show COMMIT --stat
 //lista archivos cambiados en COMMIT 
 git diff-tree COMMIT
-
+```
 ---
 ### Tags
-
+```
 //lista tags
 git tag
 //crea tag X, el mensaje es el mismo del commit donde se hace
@@ -130,10 +130,10 @@ git tag -d X
 git tag -a v1.0.0 -m MENSAJE
 //crea tag anotado con MENSAJE en COMMIT
 git tag -a v1.0.0 COMMIT -m MENSAJE
-
+```
 ---
 ### Stashs
-
+```
 //lista stashs
 git stash list
 //crea stash
@@ -152,18 +152,18 @@ git stash drop stash@{X}
 git shash show stash@{X}
 //restaura stash en RAMA
 git stash branch RAMA
-
+```
 ---
 ### Rebase
-
+```
 //actualiza la base de la rama con X, se debe estar en la rama que uno quiere actualizar
 git rebase X
 //lanza el modo interactivo, se puede usar: squash para unir commits, reword para renombra mensajes, edit para separar commits
 git rebase -i HEAD~X
-
+```
 ---
 ### Remote
-
+```
 //lista origenes remotos
 git remote -v
 //registra un origen remoto origin con la URL
@@ -185,10 +185,10 @@ git config --global pull.rebase true
 git clone URL
 //actualiza la URL del repositorio 
 git remote set-url origin URL
-
+```
 ---
 ### Ramas
-
+```
 //lista ramas
 git branch
 //crea RAMA
@@ -265,3 +265,4 @@ git push origin RAMA
 git pull --all
 //elimina las RAMAS eliminadas del repositorio
 git remote prune origin
+```
