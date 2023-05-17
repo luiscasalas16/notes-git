@@ -6,9 +6,10 @@ A continuación, un conjunto de enlaces de interés.
 
 ---
 ### Documentación
-- [Github Git Guides](https://github.com/git-guides)
+- [Git Guides](https://github.com/git-guides)
 - [Github Git Cheat Sheet](https://training.github.com/downloads/github-git-cheat-sheet)
 - [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet)
+- [Git Book](https://goalkicker.com/GitBook)
 
 ---
 ### Herramientas
