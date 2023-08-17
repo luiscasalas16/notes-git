@@ -22,7 +22,7 @@ git config --global alias.s "status --short --branch"
 //git l (log)
 git config --global alias.l "log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
 //git acp "message" (add & commit & push)
-git config --global alias.acp "!f() { git add -A && git commit -m \"$@\" && git push; }; f"
+git config --global alias.acp "!f() { git pull && git add -A && git commit -m \"$@\" && git push; }; f"
 //git ac "message" (add & commit)
 git config --global alias.ac "!f() { git add -A && git commit -m \"$@\"; }; f"
 ```
