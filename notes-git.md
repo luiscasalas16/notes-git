@@ -1,8 +1,10 @@
 # notes-git
 
 ---
-### Configuración
-```
+
+## Configuración
+
+```powershell
 //establecer nombre usuario
 git config --global user.name "Luis Carlos Salas Villalobos"
 //consultar nombre usuario
@@ -15,7 +17,7 @@ git config --global user.email
 git config --global core.autocrlf true
 
 //editar configuración
-git config --global -e 
+git config --global -e
 
 //git s (status)
 git config --global alias.s "status --short --branch"
@@ -26,17 +28,23 @@ git config --global alias.acp "!f() { git pull && git add -A && git commit -m \"
 //git ac "message" (add & commit)
 git config --global alias.ac "!f() { git add -A && git commit -m \"$@\"; }; f"
 ```
+
 ---
-### Files
-```
+
+## Files
+
+```powershell
 //archivo para ignorar archivos o carpetas, se incluye en el repositorio
 .gitignote
-//archivo para incluir carpetas vacias en el repositorio, se incluye en el repositorio
+//archivo para incluir carpetas vacías en el repositorio, se incluye en el repositorio
 .gitkeep
 ```
+
 ---
-### Repositorio
-```
+
+## Repositorio
+
+```powershell
 //inicializar repositorio
 git init
 
@@ -59,10 +67,13 @@ git mv X Y
 //elimina X
 git rm X
 ```
+
 ---
-### Commit
-```
-//resetear ARCHIVO o . (todos) en el stage
+
+## Commit
+
+```powershell
+//reiniciar ARCHIVO o . (todos) en el stage
 git reset .
 
 //listar archivos previo a commit
@@ -103,7 +114,7 @@ git diff --staged
 
 //actualiza comentario de último commit
 git commit --amend -m "MENSAJE"
-//hace commid de cambios en el último commit
+//hace commit de cambios en el último commit
 git commit --amend --no-edit
 
 //deshace ~X commits o hasta el COMMIT y establece los cambios en el staged para volver a hacer el commit
@@ -112,17 +123,20 @@ git reset --soft HEAD~X
 //deshace ~X commits o hasta el COMMIT y desecha cambios para volver a versiones previas del repositorio
 git reset --hard COMMIT
 
-//historia completo de referenicia de cambios en repositorio, se pueden utilizar para un reset los IDs
+//historia completo de referencia de cambios en repositorio, se pueden utilizar para un reset los IDs
 git reflog
 
 //lista cambios realizados en COMMIT
 git show COMMIT --stat
-//lista archivos cambiados en COMMIT 
+//lista archivos cambiados en COMMIT
 git diff-tree COMMIT
 ```
+
 ---
-### Tags
-```
+
+## Tags
+
+```powershell
 //lista tags
 git tag
 //crea tag X, el mensaje es el mismo del commit donde se hace
@@ -134,15 +148,18 @@ git tag -a v1.0.0 -m MENSAJE
 //crea tag anotado con MENSAJE en COMMIT
 git tag -a v1.0.0 COMMIT -m MENSAJE
 ```
+
 ---
-### Stashs
-```
+
+## Stashs
+
+```powershell
 //lista stashs
 git stash list
 //crea stash
 git stash
 //crea stash con un mensaje
-git stash save "mensahe"
+git stash save "mensaje"
 //obtiene último stash
 git stash pop
 //elimina stashs
@@ -156,18 +173,24 @@ git shash show stash@{X}
 //restaura stash en RAMA
 git stash branch RAMA
 ```
+
 ---
-### Rebase
-```
+
+## Rebase
+
+```powershell
 //actualiza la base de la rama con X, se debe estar en la rama que uno quiere actualizar
 git rebase X
 //lanza el modo interactivo, se puede usar: squash para unir commits, reword para renombra mensajes, edit para separar commits
 git rebase -i HEAD~X
 ```
+
 ---
-### Remote
-```
-//lista origenes remotos
+
+## Remote
+
+```powershell
+//lista orígenes remotos
 git remote -v
 //registra un origen remoto origin con la URL
 gir remote add origin URL
@@ -176,7 +199,7 @@ git push -u origin main
 //hace push de tags en origen remoto
 git push --tags
 //hace push de los cambios
-git push 
+git push
 //hace pull de los cambios
 git pull
 
@@ -186,12 +209,15 @@ git config --global pull.rebase true
 
 //clona el repositorio en la URL con el historial localmente
 git clone URL
-//actualiza la URL del repositorio 
+//actualiza la URL del repositorio
 git remote set-url origin URL
 ```
+
 ---
-### Ramas
-```
+
+## Ramas
+
+```powershell
 //lista ramas
 git branch
 //crea RAMA
@@ -208,7 +234,7 @@ git remote prune origin
 git checkout -b RAMA
 //aborta merge
 git merge --abort
-	
+
 //hacer RAMA
     git branch RAMA
     git checkout RAMA
@@ -250,11 +276,11 @@ git merge --abort
     git pull origin RAMA
     // se elimina ramas
     git push origin :RAMA
-    
-//sobreescribir archivos locales desde RAMA
+
+//sobrescribir archivos locales desde RAMA
     git fetch --all
     git reset --hard origin/main
-    
+
 //unir últimos 2 commits
     git reset --hard HEAD~2
     git merge --squash HEAD@{1}
@@ -268,4 +294,19 @@ git push origin RAMA
 git pull --all
 //elimina las RAMAS eliminadas del repositorio
 git remote prune origin
+```
+
+---
+
+## How to clone all repos at once from GitHub
+
+- Instalar [GitHub CLI](https://github.com/cli/cli).
+- Ejecutar en Git Bash.
+
+```powershell
+gh auth login
+
+gh repo list | while read -r repo _; do
+  gh repo clone "$repo" "$repo"
+done
 ```
