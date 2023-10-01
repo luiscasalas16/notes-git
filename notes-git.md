@@ -298,7 +298,7 @@ git remote prune origin
 
 ---
 
-## How to clone all repos at once from GitHub
+## Clonar todos los repos de GitHub en carpetas por repo en una carpeta principal
 
 - Instalar [GitHub CLI](https://github.com/cli/cli).
 - Ejecutar en Git Bash.
@@ -309,4 +309,21 @@ gh auth login
 gh repo list --source | while read -r repo _; do
   gh repo clone "$repo" "$repo"
 done
+```
+
+---
+
+## Verificar todos los repos en carpetas por repo en una carpeta principal, cambios pendientes o pushs pendientes
+
+```powershell
+$dir = dir . | ?{$_.PSISContainer}
+
+foreach ($d in $dir){
+    Write-Output $d.Name
+    Set-Location $d.FullName;
+    git s
+    git cherry -v
+}
+
+Set-Location ..
 ```
