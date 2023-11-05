@@ -305,10 +305,7 @@ git remote prune origin
 
 ```powershell
 gh auth login
-
-gh repo list --source | while read -r repo _; do
-  gh repo clone "$repo" "$repo"
-done
+gh repo list --source --json name --jq ".[]|.name" | ForEach-Object { gh repo clone "$_" "$_" }
 ```
 
 ---
@@ -317,13 +314,11 @@ done
 
 ```powershell
 $dir = dir . | ?{$_.PSISContainer}
-
 foreach ($d in $dir){
     Write-Output $d.Name
     Set-Location $d.FullName;
     git s
     git cherry -v
 }
-
 Set-Location ..
 ```
