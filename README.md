@@ -1,6 +1,7 @@
 # notes-git
 
 En el documento [MD](https://github.com/luiscasalas16/notes-git/blob/main/notes-git.md) están las notas de referencia sobre Git.
+En el documento [MD](https://github.com/luiscasalas16/notes-git/blob/main/notes-github.md) están las notas de referencia sobre GitHub.
 
 A continuación, un conjunto de enlaces de interés.
 
