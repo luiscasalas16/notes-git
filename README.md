@@ -32,8 +32,9 @@ Este repositorio contiene ejemplos y documentación relacionada con Git y GitHub
 
 ### Cursos
 
-- [MoureDev, Curso Git & GitHub 5h](https://github.com/mouredev/hello-git)
-- [YouTube, How to use Git with Visual Studio 2022](https://www.youtube.com/watch?v=8zSVvTQXSIc)
+- [Curso Git & GitHub - MoureDev](https://github.com/mouredev/hello-git)
+- [Aprende GIT ahora! - HolaMundo](https://www.youtube.com/watch?v=VdGzPZ31ts8)
+- [How to use Git with Visual Studio 2022](https://www.youtube.com/watch?v=8zSVvTQXSIc)
 
 ## GitHub
 
