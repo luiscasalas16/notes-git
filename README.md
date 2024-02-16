@@ -23,7 +23,9 @@ Este repositorio contiene ejemplos y documentación relacionada con Git y GitHub
 
 ### Herramientas
 
-- [GitKraken](https://www.gitkraken.com/)
+- [Git Extensions](https://gitextensions.github.io/)
+- [Git Ignore Visual Studio](https://github.com/github/gitignore/blob/main/VisualStudio.gitignore)
+- [Git Kraken](https://www.gitkraken.com/git-client)
 
 ### Artículos
 
