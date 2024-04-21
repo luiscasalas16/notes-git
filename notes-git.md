@@ -313,6 +313,7 @@ gh repo list --source --json name --jq ".[]|.name" | ForEach-Object { gh repo cl
 ## Verificar todos los repos en carpetas por repo en una carpeta principal, cambios pendientes o pushs pendientes
 
 ```powershell
+Set-Location "C:\Source"
 $dir = dir . | ?{$_.PSISContainer}
 foreach ($d in $dir){
     Write-Output $d.Name
