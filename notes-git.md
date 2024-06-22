@@ -23,10 +23,18 @@ git config --global -e
 git config --global alias.s "status --short --branch"
 # git l (log)
 git config --global alias.l "log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
-# git acp "message" (add & commit & push)
-git config --global alias.acp "!f() { git pull && git add -A && git commit -m \"$@\" && git push; }; f"
-# git ac "message" (add & commit)
-git config --global alias.ac "!f() { git add -A && git commit -m \"$@\"; }; f"
+# commit all with message
+git config --global alias.c "!git add -A && git commit -m"
+# up to remote
+git config --global alias.up "!git pull && git push"
+# down from remote
+git config --global alias.down "!git fetch && git pull"
+# synchronize remote (up & down)
+git config --global alias.sync "!git fetch && git pull && git push"
+# append to last commit
+git config --global alias.append "!git add -A && !git commit --amend --no-edit"
+# revert last commit
+git config --global alias.undo "!git reset --soft HEAD^"
 ```
 
 ---
