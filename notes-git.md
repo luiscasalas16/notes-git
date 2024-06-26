@@ -31,10 +31,12 @@ git config --global alias.up "!git pull && git push"
 git config --global alias.down "!git fetch && git pull"
 # synchronize remote (up & down)
 git config --global alias.sync "!git fetch && git pull && git push"
-# append to last commit
+# append last commit
 git config --global alias.append "!git add -A && !git commit --amend --no-edit"
-# revert last commit
+# undo last commit
 git config --global alias.undo "!git reset --soft HEAD^"
+# help
+git config --global alias.h "!echo 's = status' &&  echo 'l = log' &&  echo 'c = commit' &&  echo 'down = pull' &&  echo 'up = push' &&  echo 'sync = pull && push' &&  echo 'append = append last commit' &&  echo 'undo = undo last commit'"
 ```
 
 ---
