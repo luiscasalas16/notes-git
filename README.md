@@ -63,3 +63,8 @@ En el documento [PDF](notes-github-copilot.pdf) están las notas de pruebas real
   - [GitHub Copilot Chat](https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.VSGitHubCopilot)
 - Visual Studio Code
   - [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot)
+
+## Markdown
+
+- [Character Search Util](https://www.amp-what.com/unicode/search/check)
+- [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet)
