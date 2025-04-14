@@ -7,14 +7,15 @@
 ```powershell
 # establecer nombre usuario
 git config --global user.name "Luis Carlos Salas Villalobos"
-# consultar nombre usuario
-git config --global user.name
 # establecer correo usuario
 git config --global user.email "lusalas16@gmail.com"
-# consultar correo usuario
-git config --global user.email
 # eliminar waring de saltos de linea
 git config --global core.autocrlf true
+
+# consultar nombre usuario
+git config --global user.name
+# consultar correo usuario
+git config --global user.email
 
 # editar configuración
 git config --global -e
