@@ -316,7 +316,7 @@ git remote prune origin
 
 ```powershell
 gh auth login
-gh repo list --source --json name --jq ".[]|.name" | ForEach-Object { gh repo clone "$_" "$_" }
+gh repo list --json name --jq ".[]|.name" | ForEach-Object { gh repo clone "$_" "$_" }
 ```
 
 ---
